@@ -4,7 +4,7 @@ Denoising Diffusion Probabilistic Model (DDPM) - PyTorch
 
 This project implements a simplified Denoising Diffusion Probabilistic Model (DDPM) using PyTorch. The model is trained on a single uploaded image and learns to reconstruct it by progressively denoising random noise.
 
-📌 Overview
+Overview
 
 Diffusion models are a class of generative models that learn to generate data by reversing a gradual noising process.
 
@@ -13,14 +13,14 @@ This implementation:
 Adds Gaussian noise to an image over multiple timesteps
 Trains a neural network to predict and remove that noise
 Generates new images by reversing the diffusion process
-⚙️ Features
-📤 Upload and preprocess custom images
-🔁 Forward diffusion (noise addition)
-🔄 Reverse diffusion (image generation)
-🧱 CNN-based encoder-decoder architecture
-📉 Mean Squared Error (MSE) training loss
-🖼️ Visualization of original, noisy, and denoised images
-🏗️ Model Architecture
+Features
+Upload and preprocess custom images
+Forward diffusion (noise addition)
+Reverse diffusion (image generation)
+CNN-based encoder-decoder architecture
+Mean Squared Error (MSE) training loss
+Visualization of original, noisy, and denoised images
+Model Architecture
 
 The model is a simple convolutional encoder-decoder:
 
@@ -37,7 +37,8 @@ Sigmoid output (image reconstruction)
 .
 ├── ddpm.py            # Main training and inference script
 ├── README.md          # Project documentation
-🚀 Getting Started
+
+Getting Started
 1. Install Dependencies
 pip install torch torchvision matplotlib numpy pillow
 2. Run the Code (Google Colab Recommended)
@@ -46,7 +47,7 @@ The model will:
 Resize it to 16×16
 Train for 200 epochs
 Generate denoised samples
-🔬 Training Details
+Training Details
 Parameter	Value
 Image Size	16 × 16
 Timesteps (T)	300
@@ -55,7 +56,7 @@ Batch Size	100
 Learning Rate	0.001
 Optimizer	Adam
 Loss Function	MSE
-🔁 Diffusion Process
+Diffusion Process
 Forward Process (Noise Addition)
 
 At each timestep:
@@ -65,7 +66,7 @@ Reverse Process (Denoising)
 
 The model predicts noise and reconstructs the image step-by-step from pure noise.
 
-🖼️ Output
+Output
 
 The script displays:
 
